@@ -1,3 +1,4 @@
+export * from './Footer';
 export * from './Hero';
 export * from './ImageLinkedList';
 export * from './LinkedList';

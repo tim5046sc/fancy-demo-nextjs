@@ -60,7 +60,7 @@ const Home: NextPage = () => {
         </Box>
       </PageSection>
       <PageSection fullWidth>
-        <Box py={6} color='white'>
+        <Box py={6} color="white">
           <Image alt="Promotions" src={promoBg} fill />
           <PromoWithImage
             title={FAKE_PROMO_DATASOURCE.sampleTwo.title}
