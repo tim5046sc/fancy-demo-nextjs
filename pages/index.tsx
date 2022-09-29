@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import { FAKE_TEASER_CARDS_DATASOURCE } from "../fakeData";
 import {
   Hero,
+  ImageLinkedList,
   LinkedList,
   Page,
   PageSection,
@@ -41,6 +42,9 @@ const Home: NextPage = () => {
             </Box>
           ))}
         </Flex>
+        <Box>
+          <ImageLinkedList />
+        </Box>
       </PageSection>
     </Page>
   );

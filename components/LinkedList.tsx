@@ -16,7 +16,7 @@ export default function LinkedList() {
             width="90px"
             alt={`${linkedListItem.title}`}
           />
-          <Box flexGrow="1" pl={4} maxWidth="375px">
+          <Box flexGrow="1" pl={6} maxWidth="375px">
             <Text fontSize={24} fontWeight={600} lineHeight="28px">
               {linkedListItem.title}
             </Text>
