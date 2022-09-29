@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { Hero, Page, PageSection, Promo } from "../components";
+import { Hero, LinkedList, Page, PageSection, Promo } from "../components";
 import { Box, Flex } from "@chakra-ui/react";
 
 const Home: NextPage = () => {
@@ -11,12 +11,12 @@ const Home: NextPage = () => {
         </Box>
       </PageSection>
       <PageSection>
-        <Flex flexWrap="wrap">
-          <Box flexBasis={{ base: "100%", md: "50%" }}>
+        <Flex flexWrap="wrap" alignItems={'center'}>
+          <Box flexBasis={{ base: "100%", md: "55%" }}>
             <Promo />
           </Box>
-          <Box flexBasis={{ base: "100%", md: "50%" }}>
-            <Promo />
+          <Box flexBasis={{ base: "100%", md: "45%" }}>
+            <LinkedList />
           </Box>
         </Flex>
       </PageSection>
