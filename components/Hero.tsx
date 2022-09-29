@@ -14,7 +14,7 @@ export default function Hero() {
       alignItems={"center"}
       px={{base: 8, md: 20}}
     >
-      <Box color="white" maxWidth='600'>
+      <Box color="white" maxWidth='600' pt={'100px'}>
         <Heading fontFamily='Lora serif' fontSize={{ base: 24, md: 62}}>{FAKE_HERO_DATASOURCE.title}</Heading>
         <Text fontSize='16' my={4} lineHeight='1.5'>{FAKE_HERO_DATASOURCE.subtitle}</Text>
         <PrimaryButton label='Our Destination' />
