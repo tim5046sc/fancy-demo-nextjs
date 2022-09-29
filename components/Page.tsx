@@ -7,11 +7,9 @@ type PageProps = {
 };
 export default function Page(props: PageProps) {
   return (
-    <Box>
+    <Box position='relative'>
       <Navbar />
-      <main>
-        <Box p={8}>{props.children}</Box>
-      </main>
+        {props.children}
       <Footer />
     </Box>
   );

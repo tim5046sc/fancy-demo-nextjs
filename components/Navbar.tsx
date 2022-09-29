@@ -13,13 +13,15 @@ import {
   useColorModeValue,
   useDisclosure,
   VStack,
-  Button,
   Show,
 } from "@chakra-ui/react";
 import { useState, useMemo } from "react";
 import { ChevronDownIcon, CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 
 import { FAKE_NAV_DATASOURCE } from "../fakeData";
+
+import Logo from "./Logo";
+import PrimaryButton from './PrimaryButton';
 
 interface NavItem {
   label: string;
@@ -28,14 +30,13 @@ interface NavItem {
   description?: string;
 }
 
-import Logo from "./Logo";
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
   return (
-    <Box>
-      <Flex py={8} px={20} alignItems={"center"}>
-        <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
+    <Box position='relative' zIndex={1}>
+      <Flex py={8} px={{base: 8, md: 20}} alignItems={"center"} height={'80px'}>
+        <Flex flex={{ base: 1 }} justify={{ base: "start", md: "start" }}>
           <Logo />
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
@@ -57,19 +58,7 @@ export default function Navbar() {
           />
         </Flex>
         <Show above="md">
-          <Button
-            background={"linear-gradient(135deg, #F9EC7D 0%, #F5B100 100%)"}
-            borderRadius="100px"
-            fontSize={14}
-            padding="16px 24px"
-            transition='0.25s all'
-            _hover={{
-              background: "linear-gradient(135deg, #F9EC7D 0%, #F5B100 100%)",
-              textDecoration: 'underline'
-            }}
-          >
-            Book a trip now
-          </Button>
+          <PrimaryButton label='Book a trip now' />
         </Show>
       </Flex>
       <Collapse in={isOpen} animateOpacity>
