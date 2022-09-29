@@ -1,20 +1,32 @@
 import Image from "next/future/image";
 import { Box, Text } from "@chakra-ui/react";
+import PrimaryButton from './PrimaryButton';
 
-import { FAKE_PROMO_DATASOURCE } from "../fakeData";
+export type PromoProps = {
+  title: string;
+  description: string;
+  image?: any;
+  buttonText?: string;
+  buttonPath?: string;
+};
 
-export default function Promo() {
+export default function Promo(props: PromoProps) {
   return (
     <Box maxWidth="550px" px={4}>
       <Text fontSize={48} lineHeight="1.25" fontWeight="600" maxW={"400px"}>
-        {FAKE_PROMO_DATASOURCE.title}
+        {props.title}
       </Text>
       <Text pt={4} pb={6} fontSize={20} color="gray.500">
-        {FAKE_PROMO_DATASOURCE.description}
+        {props.description}
       </Text>
-      <Box pr={10}>
-        <Image src={FAKE_PROMO_DATASOURCE.image} alt={"Promo Image"} />
-      </Box>
+      {props.image && (
+        <Box pr={10}>
+          <Image src={props.image} alt={"Promo Image"} />
+        </Box>
+      )}
+      {props.buttonText && (
+        <PrimaryButton label='Contact Now'/>
+      )}
     </Box>
   );
 }
